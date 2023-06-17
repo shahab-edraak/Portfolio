@@ -384,6 +384,7 @@ strong {
   padding: 1rem;
   border-radius: 50%;
   cursor: pointer;
+  transition:background-color 0.7s;
 
 }
 .arrow_svg{
