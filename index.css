@@ -274,15 +274,18 @@ strong {
   width: 100%;
   margin: 1rem auto;
 }
-.featured__images > a > img {
-  filter: grayscale(0%);
+.featured__images > a {
+  filter: none;
+  transition: filter 0.3s;
+}
+.featured__images > a:hover {
+  filter: grayscale(50%);
+}
+.featured__images-img {
   border: 1px solid var(--clr-indigo);
   border-radius: 10px;
   overflow: hidden;
   transition: filter 0.5s;
-}
-.featured__images > a > img:hover {
-  filter: grayscale(75%);
 }
 .featured__images > a {
   cursor: pointer;
@@ -333,6 +336,44 @@ strong {
 .work_btn {
   font-size: var(--size--sm);
 }
+
+/* Contact CSS */
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.contact_title {
+  font-size: var(--size-2xl);
+  color: var(--clr-light);
+  text-transform: capitalize;
+}
+.contact_description {
+  font-size: var(--size--sm);
+  color: var(--clr-slate600);
+  max-width: 60ch;
+}
+.contact_links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.contact_links > a > svg {
+  height: 2rem;
+  width: 2rem;
+  color: var(--clr-light);
+  transition: color, transform 0.5s;
+}
+.contact_links > a > svg:hover {
+  color: var(--clr-rose);
+  transform: translateY(-3px);
+}
+
 /* Media Curies */
 /* xxs */
 @media (min-width: 280px) {
@@ -348,33 +389,41 @@ strong {
   .header__line {
     display: none;
   }
+  .btn {
+    font-size: var(--size--xs);
+  }
   .section {
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
   .featured__title {
     text-align: left;
-}
-.about__description{
-  font-size: var(--size-sm);
-  text-align: justify;
-}
-.about__content > h3 {
-  font-size: var(--size--base);
-}
-.about__content > ul {
- font-size: var(--size--base);
-}
-.featured__wrapper {
-  gap: 0.75rem;
-  font-size: var(--size--sm);
-}
-.featured__title {
-  font-size: var(--size-sm);
-}
-.header {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
+  }
+  .about__description {
+    font-size: var(--size-sm);
+  }
+  .about__content > h3 {
+    font-size: var(--size--base);
+  }
+  .about__content > ul {
+    font-size: var(--size--base);
+  }
+  .hero__title {
+    font-size: var(--size-2xl);
+  }
+  .featured__wrapper {
+    gap: 0.75rem;
+    font-size: var(--size--sm);
+  }
+  .featured__title {
+    font-size: var(--size-sm);
+  }
+  .header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+  .work_project-title {
+    margin-top: 2rem;
+  }
 }
 
 /* xs */
@@ -460,9 +509,6 @@ strong {
   .featured__images {
     gap: 1rem;
   }
-  .featured__images > a > img {
-    filter: none;
-  }
   /* Work CSS */
   .work_title {
     font-size: var(--size-3xl);
@@ -481,6 +527,21 @@ strong {
   }
   .work_btn {
     font-size: var(--size--lg);
+  }
+  /* Contact CSS */
+  .contact {
+    gap: 1.5rem;
+  }
+  .contact_title {
+    font-size: var(--size-3xl);
+  }
+  .contact_description {
+    font-size: var(--size--base);
+  }
+
+  .contact_links > a > svg {
+    height: 2.25rem;
+    width: 2.25rem;
   }
 }
 
@@ -717,9 +778,6 @@ strong {
     flex-direction: row;
     gap: 1rem;
   }
-  .featured__images > a > img {
-    filter: grayscale(50%);
-  }
   .featured__images > a > img:hover {
     filter: none;
   }
@@ -730,6 +788,18 @@ strong {
 
   .work_description {
     font-size: var(--size--lg);
+  }
+  /* Contact CSS */
+  .contact_title {
+    font-size: var(--size-4xl);
+  }
+  .contact_description {
+    font-size: var(--size--lg);
+  }
+
+  .contact_links > a > svg {
+    height: 2.25rem;
+    width: 2.25rem;
   }
 }
 
@@ -828,5 +898,20 @@ strong {
   }
   .work_btn {
     font-size: var(--size--xl);
+  }
+  /* Contact CSS */
+  .contact {
+    gap: 2rem;
+  }
+  .contact_title {
+    font-size: var(--size-5xl);
+  }
+  .contact_description {
+    font-size: var(--size--2xl);
+  }
+
+  .contact_links > a > svg {
+    height: 2.5rem;
+    width: 2.5rem;
   }
 }
