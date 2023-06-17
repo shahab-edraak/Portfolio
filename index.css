@@ -348,6 +348,33 @@ strong {
   .header__line {
     display: none;
   }
+  .section {
+    margin-top: 2rem;
+  }
+  .featured__title {
+    text-align: left;
+}
+.about__description{
+  font-size: var(--size-sm);
+  text-align: justify;
+}
+.about__content > h3 {
+  font-size: var(--size--base);
+}
+.about__content > ul {
+ font-size: var(--size--base);
+}
+.featured__wrapper {
+  gap: 0.75rem;
+  font-size: var(--size--sm);
+}
+.featured__title {
+  font-size: var(--size-sm);
+}
+.header {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
 }
 
 /* xs */
