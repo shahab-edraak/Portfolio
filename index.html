@@ -27,7 +27,7 @@
         </ul>
         <li class="header__line"></li>
         <li class="header__button">
-          <button class="header__sun">
+          <button class="header__sun" onclick="ChangeTheme()">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -65,7 +65,7 @@
     </header>
     <main>
       <section class="hero container">
-        <img class="hero__img" src="./shahab.png" alt="Profile Picture" />
+        <img class="hero__img" decoding="async" src="./shahab.png" alt="Profile Picture" />
         <h2 class="hero__subtitle">
           Hi,I'm <strong> Shahab</strong> &#128075;
         </h2>
@@ -108,7 +108,7 @@
           </ul>
         </div>
         <div class="about__img-wrapper">
-          <img class="about__img" src="/shahab2.jpg" alt="Profile" />
+          <img class="about__img" src="/shahab2.jpg" alt="Profile"decoding="async" />
         </div>
       </section>
       <section class="featured container section">
@@ -155,10 +155,10 @@
         </div>
         <div class="featured__images">
           <a href="https://ishahab.netlify.app" target="_blank"
-            ><img class="featured__images-img" src="/ss1.png" alt="Portfolio"
+            ><img class="featured__images-img" src="/ss1.png"decoding="async" alt="Portfolio"
           /></a>
           <a href="https://ishahab.netlify.app/#contact" target="_blank"
-            ><img class="featured__images-img" src="ss3.png" alt="Portfolio"
+            ><img class="featured__images-img" src="ss3.png" decoding="async" alt="Portfolio"
           /></a>
         </div>
       </section>
@@ -174,7 +174,7 @@
           <!-- Project 1 -->
           <h3 class="work_project-title">Wax Motif</h3>
           <div class="work_wrapper_img work_image1">
-            <img class="work_project-img" src="/waxmoney.png" alt="" />
+            <img class="work_project-img" decoding="async" src="/waxmoney.png" alt="" />
           </div>
           <div class="work_project work_content1">
             <h3 class="work_project-h3">Wax Motif</h3>
@@ -188,7 +188,7 @@
           <!-- Project 2 -->
           <h3 class="work_project-title">Draze Force</h3>
           <div class="work_wrapper_img work_image2">
-            <img class="work_project-img" src="/drazeforce.png" alt="" />
+            <img class="work_project-img"decoding="async" src="/drazeforce.png" alt="" />
           </div>
           <div class="work_project work_content2">
             <h3 class="work_project-h3">Draze Force</h3>
@@ -277,6 +277,24 @@
               ></path>
             </svg>
           </a>
+        </div>
+            
+        <div class=" arrow " onclick={scrollToTop()}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            width="2rem"
+            height="2rem"
+            class="arrow_svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M8.25 6.75L12 3m0 0l3.75 3.75M12 3v18"
+            />
+          </svg>
         </div>
       </section>
     </main>
