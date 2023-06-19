@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/shahab.png">
+    <link rel="icon" type="image/x-icon" href="/shahab.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shahab Yaseen</title>
     <link
@@ -62,10 +62,54 @@
           </svg>
         </button>
       </nav>
+      <!-- Mob Nav -->
+      <div class="mobile_nav">
+        <nav>
+          <ul class="mobile_nav-menu">
+            <li><a class="mobile_nav-link" href="#about">About</a></li>
+            <li><a class="mobile_nav-link" href="#featured">Work</a></li>
+            <li>
+              <a class="mobile_nav-link" class="mobile_nav-link" href="#contact"
+                >Contact</a
+              >
+            </li>
+
+            <li class="mobile_nav_link-line"></li>
+            <li>
+              <button class="mobile_link-sun" onclick="ChangeTheme()">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                  />
+                </svg>
+              </button>
+            </li>
+            <li>
+              <a class="mobile_nav-btn btn" href="/shahab.pdf" download
+                >Resume</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <!-- End Mob Nav -->
     </header>
     <main>
       <section id="about" class="hero container">
-        <img class="hero__img" decoding="async" src="./shahab.png" alt="Profile Picture" />
+        <img
+          class="hero__img"
+          decoding="async"
+          src="./shahab.png"
+          alt="Profile Picture"
+        />
         <h2 class="hero__subtitle">
           Hi,I'm <strong> Shahab</strong> &#128075;
         </h2>
@@ -108,7 +152,12 @@
           </ul>
         </div>
         <div class="about__img-wrapper">
-          <img class="about__img" src="/shahab2.jpg" alt="Profile"decoding="async" />
+          <img
+            class="about__img"
+            src="/shahab2.jpg"
+            alt="Profile"
+            decoding="async"
+          />
         </div>
       </section>
       <section class="featured container section">
@@ -155,10 +204,18 @@
         </div>
         <div class="featured__images">
           <a href="https://ishahab.netlify.app" target="_blank"
-            ><img class="featured__images-img" src="/ss1.png"decoding="async" alt="Portfolio"
+            ><img
+              class="featured__images-img"
+              src="/ss1.png"
+              decoding="async"
+              alt="Portfolio"
           /></a>
           <a href="https://ishahab.netlify.app/#contact" target="_blank"
-            ><img class="featured__images-img" src="ss3.png" decoding="async" alt="Portfolio"
+            ><img
+              class="featured__images-img"
+              src="ss3.png"
+              decoding="async"
+              alt="Portfolio"
           /></a>
         </div>
       </section>
@@ -174,7 +231,12 @@
           <!-- Project 1 -->
           <h3 class="work_project-title">Wax Motif</h3>
           <div class="work_wrapper_img work_image1">
-            <img class="work_project-img" decoding="async" src="/waxmoney.png" alt="" />
+            <img
+              class="work_project-img"
+              decoding="async"
+              src="/waxmoney.png"
+              alt=""
+            />
           </div>
           <div class="work_project work_content1">
             <h3 class="work_project-h3">Wax Motif</h3>
@@ -188,7 +250,12 @@
           <!-- Project 2 -->
           <h3 class="work_project-title">Draze Force</h3>
           <div class="work_wrapper_img work_image2">
-            <img class="work_project-img"decoding="async" src="/drazeforce.png" alt="" />
+            <img
+              class="work_project-img"
+              decoding="async"
+              src="/drazeforce.png"
+              alt=""
+            />
           </div>
           <div class="work_project work_content2">
             <h3 class="work_project-h3">Draze Force</h3>
@@ -278,8 +345,8 @@
             </svg>
           </a>
         </div>
-            
-        <div class=" arrow " onclick={scrollToTop()}>
+
+        <div class="arrow" onclick="{scrollToTop()}">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
