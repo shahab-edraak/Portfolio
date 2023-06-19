@@ -31,13 +31,22 @@ mobileNav();
 function scrollToTop() {
   window.scroll(100, 100);
 }
-function ChangeTheme() {
-  const root_theme = document.querySelector(":root");
-  if (theme === "dark") {
-    root_theme.style.setProperty("--clr-dark", "#ffffff");
-    theme = "light";
+
+const themeToggleBtn = document.querySelectorAll("#theme_toggle");
+// state
+const pageTheme = localStorage.getItem("theme");
+// on mount
+pageTheme && document.body.classList.add(pageTheme);
+// handlers
+const handleTheme = () => {
+  document.body.classList.toggle("light-mode");
+  if (document.body.classList.contains("light-mode")) {
+    localStorage.setItem("theme", "light-mode");
   } else {
-    root_theme.style.setProperty("--clr-dark", "#070a13");
-    theme = "dark";
+    localStorage.removeItem("theme");
   }
-}
+};
+// Events
+themeToggleBtn.forEach((btn) =>
+  btn.addEventListener("click", () => handleTheme())
+);
